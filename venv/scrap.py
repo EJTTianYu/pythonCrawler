@@ -1,10 +1,16 @@
 import requests
-from bs4 import BeautifulSoup#用于解析网页
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import re
 
-url=
-html = urlopen('https://news.baidu.com/mil')
-bsObj = BeautifulSoup(html, 'html.parser')
-t1 = bsObj.find_all('a')
-for t2 in t1:
-    t3 = t2.get('href')
-    print(t3)
+
+url='http://mil.news.sina.com.cn/roll/index.d.html?cid=57918'
+html = urlopen(url).read().decode('utf-8')
+res=re.findall(r'<a href="(.*?)" target="_blank">(.+?)</a>',html)
+for i in res:
+    print(i)
+#print(html)
+#bsObj = BeautifulSoup(spData, 'html.parser')
+#bsObj.encode("GBK")
+#t1=bsObj.select("ul.linkNews")
+#print(t1)
