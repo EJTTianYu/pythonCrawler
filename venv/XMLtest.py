@@ -8,7 +8,7 @@ managerList = [{'name' : 'joy',  'age' : 27, 'sex' : '女'},
                {'name' : 'tom', 'age' : 30, 'sex' : '男'},
                {'name' : 'ruby', 'age' : 29, 'sex' : '女'}
 ]
-
+print(type(managerList))
 for i in managerList:
     nodeTopic=doc.createElement('Topic')
     nodeTopic.appendChild(doc.createTextNode('sports'))
