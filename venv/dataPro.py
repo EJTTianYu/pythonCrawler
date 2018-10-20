@@ -9,7 +9,6 @@ text_line=8
 count=len(open(r'D:\pythonCrawler\scrapXML\news4.xml',encoding='utf-8').readlines())
 
 while(text_line<count):
-    print(get_line(filePath,title_line))
-    print(get_line(filePath,text_line))
+    print(get_line(filePath,title_line),get_line(filePath,text_line))
     title_line+=7
     text_line+=7
